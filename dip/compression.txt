@@ -1,0 +1,21 @@
+clc;
+close;
+in = input('enter sequence')
+[m,n] = size(in)
+y = 0;
+tx(1)=0
+c = 0
+for j=1:m
+  for k=1:n
+    x=in(j,k)
+    if x==y
+      tx(c) = tx(c)+1;
+     else
+      c = c+1;
+      tx(c)=1;
+    end
+    y=x;
+  end
+end
+disp("compress mat")
+disp(tx)

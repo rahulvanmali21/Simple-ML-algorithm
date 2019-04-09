@@ -1,0 +1,15 @@
+close;
+clc;
+a = imread("1.jpg")
+b = [1,1,1;1,1,1;1,1,1]
+a1 = imopen(a,b),
+a2 = imclose(a,b)
+subplot(2,2,1)
+imshow(a1)
+title("original")
+subplot(2,2,2)
+imshow(a1)
+title("open")
+subplot(2,2,3)
+imshow(a2)
+title("closed")

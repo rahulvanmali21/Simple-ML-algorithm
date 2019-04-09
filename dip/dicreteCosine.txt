@@ -1,0 +1,10 @@
+clc;
+f=[2 4 4 2;4 6 8 3;2 8 10 4;3 8 6 2];
+F=dct(f);
+disp(F,'Discrete Cosine Transform of f(m,n) using dct function');
+subplot(221);
+imshow(f);
+title('Image in spatial domain')
+subplot(223);
+imshow(F);
+title('Image in frequency domain')

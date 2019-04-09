@@ -1,0 +1,14 @@
+clc;
+a = imread("1.jpg")
+b = rgb2grey(a);
+c = imhistequal(b);
+subplot(2,2,1)
+imshow(a)
+title("Original")
+
+subplot(2,2,2)
+imshow(b)
+title("histo eq")
+
+subplot(2,2,3)
+imshow(c)

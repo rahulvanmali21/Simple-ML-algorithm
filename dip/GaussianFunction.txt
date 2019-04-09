@@ -1,0 +1,10 @@
+clc ;
+close ;
+sigma = input ('Enter Value Of Sigma:')
+i = -10:.1:10;
+j = -10:.1:10;
+r= sqrt (i.*i+j.*j);
+y=(1/( sigma^2) ) *((( r.*r)/ sigma^2) -1) .* exp(-r.*r/2*sigma ^2) ;
+plot (i,y)
+legend ( sprintf ('The Value Of Sigma is %g',sigma ))
+xtitle ('Diffrentiation Of Gaussian Function')

@@ -1,0 +1,16 @@
+clc;
+a = imread("1.jpg")
+b = rgb2ntsc(a);
+b(:,:,1) = imhist(b(:,:,1))
+c = ntsc2rgb(b)
+subplot(2,2,1)
+imshow(a)
+title("Original")
+subplot(2,2,2)
+imshow(c)
+title("histo eq")
+subplot(2,2,3)
+histplot(15,b)
+subplot(2,2,3)
+histplot(15,c)
+

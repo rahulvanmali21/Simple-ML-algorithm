@@ -1,0 +1,5 @@
+data2<-read.csv(file.choose(),sep=",",header = T)
+names(data2)
+summary(data2)
+anv1<-anova(formula=satindex~dept+exp+satindex*exp,data=data2)
+summary(anv1)
